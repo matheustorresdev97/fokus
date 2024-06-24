@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br" data-context="foco">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fokus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="./src/styles/index.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+          <figure class="app-logo-figure">
+              <img class="app-logo-image" src="./src/img/logo.png" alt="">
+          </figure>
+      </header>
+      <section class="app-section-banner-container">
+          <h1 class="app-title">
+              Otimize sua produtividade,<br>
+              <strong class="app__title-strong">mergulhe no que importa.</strong>
+          </h1>
+          <figure class="app-image-figure">
+              <img class="app-image" src="./src/img/foco.png" alt="">
+          </figure>
+      </section>
+      <section class="app-card-container">
+          <div class="app-card">
+              <ul class="app-card-list">
+                  <li class="app-card-list-item">
+                      <button data-contexto="foco" class="app-card-button app-card-button--foco active">Foco</button>
+                  </li>
+                  <li class="app-card-list-item">
+                      <button data-contexto="short" class="app-card-button app-card-button--curto">Descanso curto</button>
+                  </li>
+                  <li class="app-card-list-item">
+                      <button data-contexto="long" class="app-card-button app-card-button--longo">Descanso longo</button>
+                  </li>
+              </ul>
+              <div id="timer" class="app-card-timer"></div>
+              <ul class="app-card-list">
+                  <li class="app-card-list-item">
+                      <label class="toggle">
+                          <input class="toggle-checkbox" type="checkbox" id="alternar-musica">
+                          <div class="toggle-switch"></div>
+                      </label>
+                  </li>
+                  <li class="app-card-list-item">
+                      <label class="app-card-list-label" for="alternar-musica">
+                          Música
+                      </label>
+                  </li>
+              </ul>
+              <div class="app-card-primary-button-wrapper">
+                  <button id="start-pause" class="app-card-primary-button">
+                      <img class="app-card-primary-butto-icon" src="./src/img/play_arrow.png" alt="">
+                      <span>Começar</span>
+                  </button>
+              </div>
+          </div>
+      </section>
+
+      <section class="app-section-task-container">
+          <div class="app-section-task-content">
+              <header class="app-section-active-task">
+                  <p class="app-section-active-task-label">#Em andamento:</p>
+                  <p class="app-section-active-task-description"></p>
+              </header>
+              <div class="app-section-task-header">
+                  <h2 class="app-section-tasks-heading">Lista de tarefas:</h2>
+                  <div class="dropdown-container">
+                      <button class="app-button-more">
+                          <img src="./src/img/more.svg" alt="">
+                      </button>
+                      <ul class="app-section-task-header__ul">
+                          <li class="app-section-task-header__li">
+                              <button class="app-section-task-header-li-button" id="btn-remover-concluidas">
+                                  <img src="./src/img/check.svg" alt="">
+                                  Limpar tarefas concluídas
+                              </button>
+                          </li>
+                          <li class="app-section-task-header__li">
+                              <button class="app-section-task-header-li-button" id="btn-remover-todas">
+                                  <img src="./src/img//trash.svg" alt="">
+                                  Limpar todas as tarefas
+                              </button>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <ul class="app-section-task-list"></ul>
+              <form class="app-form-add-task hidden" aria-hidden="true">
+                  <div class="app-form-field">
+                      <label class="app-form-label">
+                          Adicionando tarefa
+                      </label>
+                      <textarea required rows="4" class="app-form-textarea" placeholder="No que você está trabalhando?"></textarea>
+                  </div>
+                  <footer class="app-form-footer">
+                      <button type="button" class="app-form-footer-button app-form-footer-button--delete">
+                          <img src="./src/delete.png" alt=""> Deletar
+                      </button>
+                      <div class="splitter"></div>
+                      <button type="button" class="app-form-footer-button app-form-footer-button--cancel">
+                          <img src="./src/close.png" alt=""> Cancelar
+                      </button>
+                      <button class="app-form-footer-button app-form-footer-button--confirm">
+                          <img src="./src/img/save.png" alt=""> Salvar
+                      </button>
+                  </footer>
+              </form>
+              <button class="app-button-add-task">
+                  <img src="./src/img/add_circle.png" alt=""> Adicionar nova tarefa
+              </button>
+          </div>
+      </section>
+
+      <footer class="app-footer">
+          <p class="app-footer-text">
+              Projeto fictício e sem fins comerciais. Imagens geradas por IA no Adobe Firefly. Desenvolvido por Matheus Torres. 
+          </p>
+      </footer>
+  </main>
+  
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

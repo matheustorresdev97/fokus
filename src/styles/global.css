@@ -1,0 +1,45 @@
+:root {
+    --color-primary: #123456;
+    --color-secondary: #FFF;
+    --azul-royal: #144480;
+    --azul-profundo: #01080E;
+    --fundo-card-timer: rgba(20, 68, 128, 0.30);
+    --lils: #B872FF;
+    --linear-botes: linear-gradient(180deg, #B872FF 0%, #144480 100%);
+    --fundo-card: rgba(255, 255, 255, 0.50);
+    --fundo-card-concludo: rgba(0, 244, 191, 0.40);
+  }
+
+  [data-context="foco"] {
+    --main-bg-color: linear-gradient(180deg, #8B1FF8 0%, #041832 48.44%, #01080E 100%);
+  }
+  
+  [data-context="descanso-curto"] {
+    --main-bg-color: linear-gradient(180deg, #0F725C 0%, #041832 48.44%, #01080E 100%);
+  }
+  
+  [data-context="descanso-longo"] {
+    --main-bg-color: linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
+  }
+
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  html {
+    background: var(--main-bg-color);
+    min-height: 100vh;
+    font-size: 10px;
+  }
+
+  body {
+    min-height: 100vh;
+    background: url("/imagens/pattern.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Unbounded', cursive;
+  }
