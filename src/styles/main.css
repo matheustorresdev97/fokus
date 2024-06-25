@@ -255,8 +255,8 @@
   margin-bottom: 4rem;
 }
 
-.app__form-textarea,
-.app__form-textarea::placeholder {
+.form-textarea,
+.form-textarea::placeholder {
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -386,7 +386,7 @@
   flex-grow: 1;
 }
 
-.form-footer__button {
+.form-footer-button {
   border: none;
   cursor: pointer;
   outline: inherit;
@@ -402,7 +402,7 @@
   gap: 0.8rem;
 }
 
-.form-footer__button--confirm {
+.form-footer-button--confirm {
   border-radius: 3.2rem;
   padding: 0.8rem 2.4rem;
   color: #fff;
