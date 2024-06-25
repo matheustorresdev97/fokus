@@ -17,77 +17,77 @@
   </head>
   <body>
     <main class="app">
-      <header class="app-header">
-          <figure class="app-logo-figure">
-              <img class="app-logo-image" src="./src/img/logo.png" alt="">
+      <header>
+          <figure class="logo-figure">
+              <img class="logo-image" src="./src/img/logo.png" alt="">
           </figure>
       </header>
-      <section class="app-section-banner-container">
-          <h1 class="app-title">
+      <section class="banner-container">
+          <h1 class="title">
               Otimize sua produtividade,<br>
-              <strong class="app__title-strong">mergulhe no que importa.</strong>
+              <strong class="title-strong">mergulhe no que importa.</strong>
           </h1>
-          <figure class="app-image-figure">
-              <img class="app-image" src="./src/img/foco.png" alt="">
+          <figure class="image-figure">
+              <img class="image" src="./src/img/foco.png" alt="">
           </figure>
       </section>
-      <section class="app-card-container">
-          <div class="app-card">
-              <ul class="app-card-list">
-                  <li class="app-card-list-item">
-                      <button data-contexto="foco" class="app-card-button app-card-button--foco active">Foco</button>
+      <section class="card-container">
+          <div class="card">
+              <ul class="card-list">
+                  <li class="list-item">
+                    <button data-contexto="foco" class="card-button card-button--foco active">Foco</button>
                   </li>
-                  <li class="app-card-list-item">
-                      <button data-contexto="short" class="app-card-button app-card-button--curto">Descanso curto</button>
+                  <li class="list-item">
+                      <button data-contexto="short" class="card-button card-button--curto">Descanso curto</button>
                   </li>
-                  <li class="app-card-list-item">
-                      <button data-contexto="long" class="app-card-button app-card-button--longo">Descanso longo</button>
+                  <li class="list-item">
+                      <button data-contexto="long" class="card-button card-button--longo">Descanso longo</button>
                   </li>
               </ul>
-              <div id="timer" class="app-card-timer"></div>
-              <ul class="app-card-list">
-                  <li class="app-card-list-item">
+              <div id="timer" class="card-timer"></div>
+              <ul class="card-list">
+                  <li class="list-item">
                       <label class="toggle">
                           <input class="toggle-checkbox" type="checkbox" id="alternar-musica">
                           <div class="toggle-switch"></div>
                       </label>
                   </li>
-                  <li class="app-card-list-item">
-                      <label class="app-card-list-label" for="alternar-musica">
+                  <li class="list-item">
+                      <label class="card-list-label" for="alternar-musica">
                           Música
                       </label>
                   </li>
               </ul>
-              <div class="app-card-primary-button-wrapper">
-                  <button id="start-pause" class="app-card-primary-button">
-                      <img class="app-card-primary-butto-icon" src="./src/img/play_arrow.png" alt="">
+              <div class="primary-button-wrapper">
+                  <button id="start-pause" class="primary-button">
+                      <img class="primary-butto-icon" src="./src/img/play_arrow.png" alt="">
                       <span>Começar</span>
                   </button>
               </div>
           </div>
       </section>
 
-      <section class="app-section-task-container">
-          <div class="app-section-task-content">
-              <header class="app-section-active-task">
-                  <p class="app-section-active-task-label">#Em andamento:</p>
-                  <p class="app-section-active-task-description"></p>
+      <section class="task-container">
+          <div class="task-content">
+              <header class="active-task">
+                  <p class="active-task-label">#Em andamento:</p>
+                  <p class="active-task-description"></p>
               </header>
-              <div class="app-section-task-header">
-                  <h2 class="app-section-tasks-heading">Lista de tarefas:</h2>
+              <div class="task-header">
+                  <h2 class="tasks-heading">Lista de tarefas:</h2>
                   <div class="dropdown-container">
-                      <button class="app-button-more">
+                      <button class="button-more">
                           <img src="./src/img/more.svg" alt="">
                       </button>
-                      <ul class="app-section-task-header__ul">
-                          <li class="app-section-task-header__li">
-                              <button class="app-section-task-header-li-button" id="btn-remover-concluidas">
+                      <ul class="task-header__ul">
+                          <li class="task-header__li">
+                              <button class="task-header-li-button" id="btn-remover-concluidas">
                                   <img src="./src/img/check.svg" alt="">
                                   Limpar tarefas concluídas
                               </button>
                           </li>
-                          <li class="app-section-task-header__li">
-                              <button class="app-section-task-header-li-button" id="btn-remover-todas">
+                          <li class="task-header__li">
+                              <button class="task-header-li-button" id="btn-remover-todas">
                                   <img src="./src/img//trash.svg" alt="">
                                   Limpar todas as tarefas
                               </button>
@@ -95,35 +95,35 @@
                       </ul>
                   </div>
               </div>
-              <ul class="app-section-task-list"></ul>
-              <form class="app-form-add-task hidden" aria-hidden="true">
-                  <div class="app-form-field">
-                      <label class="app-form-label">
+              <ul class="task-list"></ul>
+              <form class="form-add-task hidden" aria-hidden="true">
+                  <div class="form-field">
+                      <label class="form-label">
                           Adicionando tarefa
                       </label>
-                      <textarea required rows="4" class="app-form-textarea" placeholder="No que você está trabalhando?"></textarea>
+                      <textarea required rows="4" class="form-textarea" placeholder="No que você está trabalhando?"></textarea>
                   </div>
                   <footer class="app-form-footer">
-                      <button type="button" class="app-form-footer-button app-form-footer-button--delete">
+                      <button type="button" class="form-footer-button form-footer-button--delete">
                           <img src="./src/delete.png" alt=""> Deletar
                       </button>
                       <div class="splitter"></div>
-                      <button type="button" class="app-form-footer-button app-form-footer-button--cancel">
+                      <button type="button" class="form-footer-button form-footer-button--cancel">
                           <img src="./src/close.png" alt=""> Cancelar
                       </button>
-                      <button class="app-form-footer-button app-form-footer-button--confirm">
+                      <button class="form-footer-button form-footer-button--confirm">
                           <img src="./src/img/save.png" alt=""> Salvar
                       </button>
                   </footer>
               </form>
-              <button class="app-button-add-task">
+              <button class="button--add-task">
                   <img src="./src/img/add_circle.png" alt=""> Adicionar nova tarefa
               </button>
           </div>
       </section>
 
-      <footer class="app-footer">
-          <p class="app-footer-text">
+      <footer class="footer">
+          <p class="footer-text">
               Projeto fictício e sem fins comerciais. Imagens geradas por IA no Adobe Firefly. Desenvolvido por Matheus Torres. 
           </p>
       </footer>
